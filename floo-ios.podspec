@@ -40,7 +40,8 @@ Pod::Spec.new do |s|
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   s.frameworks = 'UIKit', 'QuartzCore', 'ImageIO', 'CoreVideo', 'CoreMedia', 'CoreGraphics', 'AVFoundation', 'AssetsLibrary'
-  s.libraries = 'libsqlite3','libc++abi', 'libsqlite3', 'libstdc++', 'libz', 'libc++', 'libresolv'
-  s.vendored_libraries = 'lib/libcrypto/*.a'
+  s.libraries = 'sqlite3','c++abi',  'stdc++', 'z', 'c++', 'resolv'
+  s.vendored_library = 'lib/libcrypto/libcrypto.a'
+  s.xcconfig = { 'OTHER_LDFLAGS' => '-ObjC' }
   
 end
